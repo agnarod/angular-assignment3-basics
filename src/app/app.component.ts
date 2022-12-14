@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'basics-asignment-3';
+  allowData = false;
+  clicks = [];
+
+  onToggle(){
+    this.allowData = !this.allowData;
+    this.clicks.push(new Date());
+  }
 }
